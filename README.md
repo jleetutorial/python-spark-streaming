@@ -23,11 +23,11 @@ This repository contains the files and lectures for the _[Insert Title or Organi
 	* Need to demo how to create a twitter developer account to the twitter oauth token
 	* Need to set the logging level to ERROR to reduce the output noise ([Video Example](https://youtu.be/vLrcjVxdTng0))
 	* Code samples [one](https://drive.google.com/open?id=0Bym8DZ5hyGifdmRKMVR1QVlKNW8) and [two](https://drive.google.com/open?id=0Bym8DZ5hyGifX2t3UXNHc0RpWDA), don’t copy and paste these
-	* We should point out winutils.exe needs to be installed for Windows users in order to run Spark applications.
+	* We should point out [winutils.exe needs to be installed for Windows users in order to run Spark applications](https://docs.google.com/document/d/1bAsB0ZBjXGQ4md0Z3LIeaHosPQ1eFUmiIdU_FdanPqE/edit).
 
 ### Section 2: Spark Streaming Basics
 1. What are Discretized Streams
-	* Reference: https://spark.apache.org/docs/latest/streaming-programming-guide.html#discretized-streams-dstreams
+	* [Reference](https://spark.apache.org/docs/latest/streaming-programming-guide.html#discretized-streams-dstreams)
 	* Use some graph to explain DStreams
 2. How to create Discretized Streams
 	* Different ways to create DStreams
@@ -36,93 +36,79 @@ This repository contains the files and lectures for the _[Insert Title or Organi
 	* Kafka
 	* Flume
 	* Kinesis
-	* Twitter 
-	* Reference: https://spark.apache.org/docs/latest/streaming-programming-guide.html#basic-sources
-	* Revisit your first Spark application
-	* DEMO: Queue of RDDs as a Stream
+	* Twitter ([Reference](https://spark.apache.org/docs/latest/streaming-programming-guide.html#basic-sources), revisit your first Spark application)
+	* **DEMO:** Queue of RDDs as a Stream
 3. Transformations on DStreams
 	* Basic RDD transformations(stateless transformation): `Map`, `flatMap`, `Filter`, `Repartition`, `Union`, `Count`, `Reduce`, `countByValue`, `reduceByKey`, `Join`, `Cogroup`
-	* DEMO: Pick up 2 of the transformations to demo in the program
-	* EXERCISE: prepare an exercise for student to use one of the transformations
+	* **DEMO:** Pick up 2 of the transformations to demo in the program
+	* **EXERCISE:** prepare an exercise for student to use one of the transformations
 4. Transform Operation
 	* What is transform operation and the benefit of it ([Reference](https://spark.apache.org/docs/latest/streaming-programming-guide.html#transform-operation))
-	* DEMO: do a demo with Transform Operation
-	* EXERCISE: prepare an exercise for student to use transformation operation
+	* **DEMO:** do a demo with Transform Operation
+	* **EXERCISE:** prepare an exercise for student to use transformation operation
 5. Window Operations
 	* What is Window Operations(better with some graphs)
 	* Explain parameters (window length and sliding interval)
-	* Some of the popular Window operations
-6. Window
-	* countByWindow
-	* reduceByKeyAndWindow
-	* countByValueAndWindow
-	* Window
-	* Explain Window transformation in depth and what is the usage of Window function
-	* DEMO: Do a demo with Window transformation
-	* EXERCISE: Give an exercise about  Window tansformation
-7. countByWindow
-	* Explain countByWindow transformation in depth and what is the usage of countByWindow function
-	* DEMO: Do a demo with countByWindow transformation
-	* EXERCISE: Give an exercise about countByWindow tansformation
-8. reduceByKeyAndWindow
-	* Explain reduceByKeyAndWindow transformation in depth and what is the usage of reduceByKeyAndWindow function
-	* DEMO: Do a demo with reduceByKeyAndWindow transformation
-	* EXERCISE: Give an exercise about reduceByKeyAndWindow tansformation
-9. countByValueAndWindow
-	* Explain countByValueAndWindow transformation in depth and what is the usage of countByValueAndWindow function
-	* DEMO: Do a demo with countByValueAndWindow transformation
-	* EXERCISE: Give an exercise about countByValueAndWindow tansformation
+	* Some of the popular Window operations (e.g., `Window`, `countByWindow`, `reduceByKeyAndWindow`, `countByValueAndWindow`)
+6. `Window`
+	* Explain `Window` transformation in depth and what is the usage of `Window` function
+	* **DEMO:** Do a demo with `Window` transformation
+	* **EXERCISE:** Give an exercise about `Window` tansformation
+7. `countByWindow`
+	* Explain `countByWindow` transformation in depth and what is the usage of `countByWindow` function
+	* **DEMO:** Do a demo with `countByWindow` transformation
+	* **EXERCISE:** Give an exercise about `countByWindow` tansformation
+8. `reduceByKeyAndWindow`
+	* Explain `reduceByKeyAndWindow` transformation in depth and what is the usage of `reduceByKeyAndWindow` function
+	* **DEMO:** Do a demo with `reduceByKeyAndWindow` transformation
+	* **EXERCISE:** Give an exercise about `reduceByKeyAndWindow` tansformation
+9. `countByValueAndWindow`
+	* Explain `countByValueAndWindow` transformation in depth and what is the usage of `countByValueAndWindow` function
+	* **DEMO:** Do a demo with `countByValueAndWindow` transformation
+	* **EXERCISE:** Give an exercise about `countByValueAndWindow` tansformation
 10. Output Operations on DStreams
-	* Different output operation
-	* Print
-	* saveAsTextFiles
-	* saveAsObjectFiles
-	* saveAsHadoopFiles
-	* foreachRDD
-	* DEMO: Demo how to save tweets to files
-	* Example: https://drive.google.com/open?id=0Bym8DZ5hyGifaXgwWFQxdVQ4UzA
-	* use foreachRDD and saveAsTextFiles
-11. foreachRDD
-	* Explain foreachRDD and the basic usage about foreachRDD
-	* Design Patterns for foreachRDD
+	* Different output operation (e.g., `Print`, `saveAsTextFiles`, `saveAsObjectFiles`, `saveAsHadoopFiles`, `foreachRDD`)
+	* **DEMO:** Demo how to save tweets to files ([Example](https://drive.google.com/open?id=0Bym8DZ5hyGifaXgwWFQxdVQ4UzA))
+	* use `foreachRDD` and `saveAsTextFiles`
+11. `foreachRDD`
+	* Explain `foreachRDD` and the basic usage about `foreachRDD`
+	* Design Patterns for `foreachRDD`
 	* Reference: https://spark.apache.org/docs/latest/streaming-programming-guide.html#design-patterns-for-using-foreachrdd
-	* DEMO: Do a demo with foreachRDD
-	* EXERCISE: Give an exercise about foreachRDD
+	* **DEMO:** Do a demo with `foreachRDD`
+	* **EXERCISE:** Give an exercise about `foreachRDD`
 12. SQL OPERATIONS
-	* https://spark.apache.org/docs/latest/streaming-programming-guide.html#dataframe-and-sql-operations
-	* DEMO: Do a demo with SQL OPERATIONS
-	* EXERCISE: Give an exercise about SQL OPERATIONS
+	* [Dataframe and SQL Operations](https://spark.apache.org/docs/latest/streaming-programming-guide.html#dataframe-and-sql-operations)
+	* **DEMO:** Do a demo with SQL OPERATIONS
+	* **EXERCISE:** Give an exercise about SQL OPERATIONS
 
 ### 3. Section: Advanced
 1. Join Operations
 	* Different types of Join
 	* Stream-stream joins
 	* Stream-dataset joins
-	* DEMO: Do a demo with Stream-stream joins
-	* DEMO: Do a demo with Stream-dataset joins
-	* EXERCISE: Give an exercise with Stream-stream joins or Stream-dataset joins
+	* **DEMO:** Do a demo with Stream-stream joins
+	* **DEMO:** Do a demo with Stream-dataset joins
+	* **EXERCISE:** Give an exercise with Stream-stream joins or Stream-dataset joins
 2. Stateful transformation
 	* Transformations
-	* UpdateStateByKey
-	* mapWithState
-	* DEMO Do a demo with UpdateStateByKey or mapWithState
-	* Needs come up with a proper scenario to use  mapWithState or UpdateStateByKey, such as some web session data.
-	* EXERCISE: Prepare an exercise with UpdateStateByKey or mapWithState
+	* `UpdateStateByKey`
+	* `mapWithState`
+	* **DEMO** Do a demo with `UpdateStateByKey` or `mapWithState`
+	* Needs come up with a proper scenario to use `mapWithState` or `UpdateStateByKey`, such as some [web session data](https://drive.google.com/file/d/0Bym8DZ5hyGifWTJkQW5laUdwRU0/view).
+	* **EXERCISE:** Prepare an exercise with UpdateStateByKey or mapWithState
 3. Check point
 	* What is checkpoint and why use check point
-	* Different types of checkpoint
-	* Metadata checkpointing
-	* Data checkpointing
+	* Different types of checkpoint (Metadata checkpointing & Data checkpointing)
 	* When to enable Checkpointing
 	* How to configure Checkpointing
-	* DEMO: Do a demo with Checkpointing
-	* EXERCISE: Give Exercise with Checkpointing
+	* **DEMO:** Do a demo with Checkpointing
+	* **EXERCISE:** Give Exercise with Checkpointing
 4. Accumulators
 	* What is Accumulators and usage of Accumulators
-	* DEMO: Do a demo with Accumulators
-	* EXERCISE: Give an Exercise with Accumulators
+	* **DEMO:** Do a demo with Accumulators
+	* **EXERCISE:** Give an Exercise with Accumulators
 5. Fault-tolerance
-	* https://spark.apache.org/docs/latest/streaming-programming-guide.html#fault-tolerance-semantics
+	* [Fault Tolerance Semantics](https://spark.apache.org/docs/latest/streaming-programming-guide.html#fault-tolerance-semantics)
 
 ### Section 4: More about Spark streaming
 1. Performance Tuning
@@ -137,33 +123,32 @@ This repository contains the files and lectures for the _[Insert Title or Organi
 2. Integration with Kafka
 	* Introduction to Kafka
 	* Why integrate with Kafka
-	* DEMO: Demo
+	* DEMO: [Demo](https://drive.google.com/file/d/0Bym8DZ5hyGifcnU1ZVVteEI3X1U/view?usp=drive_web)
 3. Integration with Kinesis
 	* Introduction to Kinesis
 	* Why integrate with Kinesis
-	* DEMO: Demo
+	* **DEMO:** [Demo](https://drive.google.com/file/d/0Bym8DZ5hyGifX2JNdFZENUpiRXM/view)
 
 ### Section 5: Structured Streaming
 1. Introduction about Structured Streaming
 	* Overview of Structured Streaming
-	* The Benefit of structured streaming
+	* [The Benefit of structured streaming](https://drive.google.com/file/d/0Bym8DZ5hyGifM2VOYlJVQ3NwaTg/view)
 	* [Basic Concepts about Spark streaming](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#basic-concepts)
-	* [DEMO: A quick demo about an structured streaming example](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#quick-example)
-
+	* **DEMO:** [A quick demo about an structured streaming example](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#quick-example)
 2. Operations on streaming DataFrames/Datasets
 	* [Structured Streaming Programming Guide: Operations on Streaming Dataframe Datasets](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#operations-on-streaming-dataframesdatasets)
-	* DEMO: DO a demo:
-	* EXERCISE: Prepare an excise 
+	* **DEMO:** DO a demo:
+	* **EXERCISE:** Prepare an excise 
 3. Window Operations
 	* [Structured Streaming Programming Guide: Window Operations on Event Time](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#window-operations-on-event-time)
-	* DEMO: Do a demo ([exmaple](https://drive.google.com/open?id=0Bym8DZ5hyGifU2YzUmx3aldVdkU))
-	* EXERCISE: Prepare an excise 
+	* **DEMO:** Do a demo ([exmaple](https://drive.google.com/open?id=0Bym8DZ5hyGifU2YzUmx3aldVdkU))
+	* **EXERCISE:** Prepare an excise 
 4. Handling Late Data and Watermarking
-	* https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#handling-late-data-and-watermarking
+	* [Handling Late Data and Watermarking Example](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#handling-late-data-and-watermarking)
 
 ### Section 6: Finish up
 1. Add an introductory lecture about that is covered in the course
-	* this video should be placed as the first lecture of this course, but we do it after we are done creating this course
+	* This video should be placed as the first lecture of this course, but we do it after we are done creating this course
 2. Add a promotion video
 	* This will be about what users will learn from this lecture and how they will benefit
 3. Finish up lecture
