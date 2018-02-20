@@ -21,8 +21,8 @@ class TweetsListener(StreamListener):
   def on_data(self, data):
       try:
           msg = json.loads( data )
-          print( msg['text'].encode('utf-8') )
-          self.client_socket.send( msg['text'].encode('utf-8') )
+          print(msg['text'].encode('utf-8'))
+          self.client_socket.send( msg['text'].encode('utf-8'))
           return True
       except BaseException as e:
           print("Error on_data: %s" % str(e))
@@ -40,7 +40,7 @@ def sendData(c_socket):
   twitter_stream.filter(track=['football'])
 
 if __name__ == "__main__":
-  s = socket.socket()         # Create a socket object
+  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
   host = "127.0.0.1"     # Get local machine name
   port = 5555                 # Reserve a port for your service.
   s.bind((host, port))        # Bind to the port
@@ -50,6 +50,6 @@ if __name__ == "__main__":
   s.listen(5)                 # Now wait for client connection.
   c, addr = s.accept()        # Establish connection with client.
 
-  print( "Received request from: " + str( addr ) )
+  print("Received request from: " + str(addr))
 
-  sendData( c )
+  sendData(c)
