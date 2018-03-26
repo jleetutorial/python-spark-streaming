@@ -1,0 +1,10 @@
+v1
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/5.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/4.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/3.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/8.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/6.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/7.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/1.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/2.csv","timestamp":1515756794000,"batchId":0}
+{"path":"file:///home/matthew/pyspark-streaming/5_structured/monitoring_data/9.csv","timestamp":1515756794000,"batchId":0}
